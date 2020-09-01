@@ -36,7 +36,7 @@ export interface Invoice {
   lowFeeDetected: boolean;
   btcPaid: string;
   rate: number;
-  exceptionStatus: boolean;
+  exceptionStatus: false | 'paidOver' | 'paidLate' | 'paidPartial';
   paymentUrls: {
     BIP21: string | null;
     BIP72: string | null;
